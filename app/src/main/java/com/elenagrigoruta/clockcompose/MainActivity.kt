@@ -89,7 +89,7 @@ fun Clock(
             val angleInRad = i * (360f / 60f) * (PI.toFloat() / 180f)
             val lineLength = if (i % 5 == 0) 20.dp.toPx() else 15.dp.toPx()
             val strokeWidth = if (i % 5 == 0) 1.dp.toPx() else 0.5.dp.toPx()
-            val color = if(i % 5 == 0) androidx.compose.ui.graphics.Color.DarkGray else Color(0xFF606060)
+            val color = if(i % 5 == 0) Color.DarkGray else Color(0xFF606060)
 
             val lineStart = Offset(
                 x = radius.toPx() * cos(angleInRad) + center.x,
@@ -110,7 +110,7 @@ fun Clock(
         // Seconds
         rotate(degrees = seconds * (360f / 60f)) {
             drawLine(
-                color = androidx.compose.ui.graphics.Color.Red,
+                color = Color.Red,
                 start = center,
                 end = Offset(center.x, 20.dp.toPx()),
                 strokeWidth = 2.dp.toPx(),
@@ -120,7 +120,7 @@ fun Clock(
         // Minutes
         rotate(degrees = minutes * (360f / 60f)) {
             drawLine(
-                color = androidx.compose.ui.graphics.Color.Black,
+                color = Color.Black,
                 start = center,
                 end = Offset(center.x, 20.dp.toPx()),
                 strokeWidth = 3.dp.toPx(),
@@ -130,7 +130,7 @@ fun Clock(
         // Hours
         rotate(degrees = hours * (360f / 12f)) {
             drawLine(
-                color = androidx.compose.ui.graphics.Color.Black,
+                color = Color.Black,
                 start = center,
                 end = Offset(center.x, 35.dp.toPx()),
                 strokeWidth = 4.dp.toPx(),
